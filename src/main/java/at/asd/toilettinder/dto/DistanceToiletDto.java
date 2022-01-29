@@ -13,6 +13,6 @@ public class DistanceToiletDto {
 
     private double longitude;
     private double latitude;
-    private List<Long> toiletIdstoSkip;
+    private List<Long> toiletIdsToSkip;
 
 }
