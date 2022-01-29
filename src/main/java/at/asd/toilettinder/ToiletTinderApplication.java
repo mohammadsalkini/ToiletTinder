@@ -9,5 +9,6 @@ import org.springframework.context.annotation.Configuration;
 public class ToiletTinderApplication {
     public static void main(String[] args) {
         SpringApplication.run(ToiletTinderApplication.class, args);
+
     }
 }
