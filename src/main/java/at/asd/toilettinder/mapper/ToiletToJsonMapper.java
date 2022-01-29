@@ -31,7 +31,6 @@ public class ToiletToJsonMapper {
         toiletJson.put(TOILET_ID,toilet.getId());
         toiletJson.put(TOILET_NAME, toilet.getName());
         toiletJson.put(TOILET_OPENING_HOURS, toilet.getOpeningTime());
-//        toiletJson.put(IMAGE, );
         toiletJson.put(TOILET_LOCATION, getLocationJSON(toilet));
         toiletJson.put(TOILET_RATINGS, getRatingJSON(toilet));
         return toiletJson;
