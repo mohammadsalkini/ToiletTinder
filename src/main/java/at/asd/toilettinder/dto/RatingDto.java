@@ -10,4 +10,5 @@ import lombok.Setter;
 public class RatingDto {
     private String stars;
     private String comment;
+    private long toiletId;
 }

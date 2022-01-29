@@ -26,11 +26,9 @@ public class Rating {
     @Temporal(TemporalType.TIMESTAMP)
     private Calendar creationDate;
 
-    public Rating(String stars, String comment, Toilet toilet, Calendar creationDate) {
+    public Rating(String stars, String comment, Toilet toilet) {
         this.stars = stars;
         this.comment = comment;
         this.toilet = toilet;
-        this.creationDate = creationDate;
-
     }
 }

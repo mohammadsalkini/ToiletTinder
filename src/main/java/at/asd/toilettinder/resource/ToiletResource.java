@@ -1,14 +1,14 @@
 package at.asd.toilettinder.resource;
 
+import at.asd.toilettinder.dto.DistanceToiletDto;
 import at.asd.toilettinder.mapper.ToiletToJsonMapper;
 import at.asd.toilettinder.model.Toilet;
 import at.asd.toilettinder.service.ToiletService;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.data.geo.Distance;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -18,10 +18,10 @@ public class ToiletResource {
 
     private ToiletService toiletService;
 
-    @GetMapping("/getNearestThreeToilets")
-    public JSONArray getNearestToilet() {
+    @PostMapping("/getNearestThreeToilets")
+    public JSONArray getNearestToilet(@RequestBody DistanceToiletDto distanceToiletDto) {
         JSONArray result = new JSONArray();
-        List<Toilet> toilets = toiletService.getNearestThreeToilets(12.0, 12.0, null);
+        List<Toilet> toilets = toiletService.getNearestThreeToilets(distanceToiletDto.getLongitude(), distanceToiletDto.getLatitude(), distanceToiletDto.getToiletIdstoSkip());
         toilets.forEach(t -> result.add(ToiletToJsonMapper.map(t)));
         return result;
     }
