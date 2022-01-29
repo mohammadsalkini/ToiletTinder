@@ -12,11 +12,11 @@ import java.io.IOException;
 public class ToiletTinderApplication {
 
     public static void main(String[] args) throws IOException {
-        ReadCSV2 readcsv2 = new ReadCSV2();
-        readcsv2.csv();
+//        ReadCSV2 readcsv2 = new ReadCSV2();
+//        readcsv2.csv();
 
 
-        //SpringApplication.run(ToiletTinderApplication.class, args);
+        SpringApplication.run(ToiletTinderApplication.class, args);
     }
 
 
