@@ -30,7 +30,7 @@ public class ToiletService {
         return result;
     }
 
-    private double distance(double lat1, double lat2, double lon1, double lon2) {
+    private static double distance(double lat1, double lat2, double lon1, double lon2) {
         double el1 = 0.0;
         double el2 = 0.0;
         final int R = 6371; // Radius of the earth
