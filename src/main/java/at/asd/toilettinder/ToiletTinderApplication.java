@@ -1,23 +1,22 @@
 package at.asd.toilettinder;
 
-import at.asd.toilettinder.service.ReadCSV2;
+import at.asd.toilettinder.model.Toilet;
+import at.asd.toilettinder.parser.ToiletParser;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Configuration;
 
-import java.io.IOException;
+import java.util.*;
 
 @Configuration
 @SpringBootApplication
 public class ToiletTinderApplication {
 
-    public static void main(String[] args) throws IOException {
-//        ReadCSV2 readcsv2 = new ReadCSV2();
-//        readcsv2.csv();
-
-
+    public static void main(String[] args) {
         SpringApplication.run(ToiletTinderApplication.class, args);
     }
+
+
 
 
 }

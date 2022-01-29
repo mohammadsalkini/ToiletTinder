@@ -24,7 +24,7 @@ public class Rating {
     @JoinColumn(name = "toilet_id", nullable = false)
     private Toilet toilet;
     @Temporal(TemporalType.TIMESTAMP)
-    private Calendar creationDate;
+    private Calendar creationDate = Calendar.getInstance();
 
     public Rating(String stars, String comment, Toilet toilet) {
         this.stars = stars;
