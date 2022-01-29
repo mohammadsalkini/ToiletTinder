@@ -1,4 +1,4 @@
-package at.asd.toilettinder;
+package at.asd.toilettinder.entity;
 
 
 import lombok.*;
