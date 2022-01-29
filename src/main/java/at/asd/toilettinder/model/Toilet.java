@@ -3,6 +3,7 @@ package at.asd.toilettinder.model;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -12,7 +13,7 @@ import javax.persistence.*;
 public class Toilet {
     @Id
     @Column(name = "rating_id")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NonNull
     private String name;
@@ -26,4 +27,7 @@ public class Toilet {
     private String openingTime;
     @NonNull
     private boolean payed;
+
+    @OneToMany(mappedBy="toilet", fetch = FetchType.EAGER)
+    private Set<Rating> ratings;
 }

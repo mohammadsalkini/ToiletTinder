@@ -14,13 +14,13 @@ public class Rating {
 
     @Id
     @Column(name = "rating_id")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NonNull
     private String stars;
     @NonNull
     private String comment;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "toilet_id", nullable = false)
     private Toilet toilet;
     @Temporal(TemporalType.TIMESTAMP)
