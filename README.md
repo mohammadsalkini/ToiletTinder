@@ -1,3 +1,3 @@
 # ToiletTinder
 
-![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/mohammadsalkini/ToiletTinder)
+![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/mohammadalsalkini/toilettinder)
