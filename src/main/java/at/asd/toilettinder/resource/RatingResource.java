@@ -15,13 +15,12 @@ public class RatingResource {
 
     private RatingService ratingService;
 
+    public RatingResource(RatingService ratingService) {
+        this.ratingService = ratingService;
+    }
+
     @PostMapping("/createRating")
     public void createRating(@RequestBody RatingDto ratingDto) {
         ratingService.createRating(ratingDto);
-    }
-
-    @Autowired
-    public RatingService getRatingService() {
-        return ratingService;
     }
 }

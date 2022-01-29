@@ -26,7 +26,7 @@ public class ToiletService {
 
         toiletDistanceContainers.stream().sorted(Comparator.comparingDouble(ToiletDistanceContainer::getDistance)).collect(Collectors.toList());
         List<Toilet> result = new ArrayList<>();
-        toiletDistanceContainers.subList(0, 2).forEach(c -> result.add(c.getToilet()));
+        toiletDistanceContainers.subList(0, 3).forEach(c -> result.add(c.getToilet()));
         return result;
     }
 
